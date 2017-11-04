@@ -1,0 +1,33 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "Burger Node.js application",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "8.8.0",
+    "npm": "5.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhurley94/eat-da-burger.git"
+  },
+  "author": "Dave Hurley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhurley94/eat-da-burger/issues"
+  },
+  "homepage": "https://github.com/dhurley94/eat-da-burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql2": "^1.4.2",
+    "path": "^0.12.7",
+    "sequelize": "^4.22.1"
+  }
+}
