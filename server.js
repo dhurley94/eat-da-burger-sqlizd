@@ -1,6 +1,5 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const methodOverride = require('method-override');
 const burgers = require('./controllers/burgers_controller');
 const path = require('path');
 

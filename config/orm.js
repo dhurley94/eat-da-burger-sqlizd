@@ -1,5 +1,35 @@
-const connect = require('./connection');
-const sqlize = require('sequelize');
+const connection = require('./connection');
+
+    /**
+     * Get all data from `burgers` tbl
+     * return array ordered by id
+     */
+function selectAll(cb) {
+    connection.query('SELECT * FROM ??', [burgers])
+        .success((projects) => {
+            console.log(projects);
+        });
+    return cb(projects);
+}
+
+    /**
+     * INSERTS data from form into `burgers` tbl
+     * takes one param for burger name
+     */
+function insertOne (burger_name) {
+
+}
+
+    /**
+     * Updates `burgers` tbl based on id
+     * takes two params
+     * burger id and new `devoured` data
+     */
+function updateOne (_id, _devoured) {
+
+}
+
+module.exports = { selectAll, insertOne, updateOne };
 
 // module.exports = {
 //     /**
@@ -7,10 +37,7 @@ const sqlize = require('sequelize');
 //      * return array ordered by id
 //      */
 //     selectAll: (cb) => {
-//         connect.execute('SELECT * FROM burgers ORDER BY id', (error, result) => {
-//             if (error) { return console.log(error); }
-//             return cb(result);
-//         });
+//        return sqlize.findAll(cb)
 //     },
 //     /**
 //      * INSERTS data from form into `burgers` tbl
