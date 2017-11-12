@@ -17,10 +17,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: 1
-        },
-        date: {
-            type: DataTypes.DATE,
-            defaultValue: sequelize.NOW,
         }
     });
     return Burger;

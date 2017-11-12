@@ -3,7 +3,7 @@
     {{#if this.devoured }}
       <li id="devoured" class="list-group-item disabled"><a href='#' class="btn btn-warning btn-sm disabled">Devoured!</a> &nbsp;&nbsp; {{ this.burger_name }}</li>
     {{else}}
-      <li class="list-group-item"><a href='/index/{{this.id}}' class="btn btn-info btn-sm">Eat!</a> &nbsp;&nbsp; {{ this.burger_name }} created on {{ date }}</li>
+      <li class="list-group-item"><a href='/index/{{this.id}}' class="btn btn-info btn-sm">Eat!</a> &nbsp;&nbsp; {{ this.burger_name }} created on {{ this.createdAt }}</li>
     {{/if}}
   {{/each}}
 </ul>

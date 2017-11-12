@@ -20,7 +20,7 @@ router.get('/index', (req, res) => {
 
 router.get('/index/:burgerId', (req, res) => {
     db.burger.update({
-        devoured: 0
+        devoured: 1
     }, {
         where: {
             id: req.params.burgerId
