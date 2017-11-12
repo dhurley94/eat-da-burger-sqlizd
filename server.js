@@ -1,6 +1,8 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const path = require('path');
+const burgers = require('./controllers/burgers_controller');
 
 let app = express();
 let db = require('./models');

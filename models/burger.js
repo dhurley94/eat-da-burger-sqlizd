@@ -4,8 +4,8 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isAlpha,
-                notEmpty
+                isAlpha: true,
+                notEmpty: true
             }
         },
         devoured: {

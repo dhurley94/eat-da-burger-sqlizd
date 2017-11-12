@@ -5,7 +5,7 @@ const Sequelize = require('sequelize');
 const connection = new Sequelize('database', 'username', 'password', {
     "username": "cwpsvrczoumf3iz1",
     "password": "fi4rxb04gc10n94a",
-    "database": "burger_db",
+    "database": "hf4ea8t6cjpf2nna",
     "host": "sp6xl8zoyvbumaa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
 
