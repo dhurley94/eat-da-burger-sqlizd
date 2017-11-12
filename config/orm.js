@@ -1,11 +1,17 @@
-const connection = require('./connection');
+'use strict';
+
+const connect = require('./connection');
+const sqlize = require('sequelize');
+
+let burgerStat = require('./sequelWise');
 
     /**
      * Get all data from `burgers` tbl
      * return array ordered by id
      */
 function selectAll(cb) {
-    connection.query('SELECT * FROM ??', [burgers])
+    connection.query('SELECT * FROM ??', [burgerStat])\
+        .sui
         .success((projects) => {
             console.log(projects);
         });
@@ -31,11 +37,9 @@ function updateOne (_id, _devoured) {
 
 module.exports = { selectAll, insertOne, updateOne };
 
+        
 // module.exports = {
-//     /**
-//      * Get all data from `burgers` tbl
-//      * return array ordered by id
-//      */
+
 //     selectAll: (cb) => {
 //        return sqlize.findAll(cb)
 //     },
