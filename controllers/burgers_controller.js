@@ -9,12 +9,19 @@ router.get('/', (req, res) => {
     res.redirect('/index');
 });
 
+/**
+ * index page
+ */
 router.get('/index', (req, res) => {
     db.burger.findAll({}).then((results) => {
         res.render('index', { burgs: results });
     });
 });
 
+/**
+ * Same as ORM previously built but
+ * uses sequelize to update row based on ID
+ */
 router.get('/index/:burgerId', (req, res) => {
     db.burger.update({
         devoured: 1
@@ -27,6 +34,10 @@ router.get('/index/:burgerId', (req, res) => {
     });
 });
 
+/**
+ * POST handler for new burgers
+ * creates new entry
+ */
 router.post('/index', urlencodedParser, (req, res) => {
     db.burger.create({
         burger_name: req.body.burger
