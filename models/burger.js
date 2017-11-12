@@ -1,39 +1,16 @@
 const orm = require('../config/orm');
 
 module.exports = function(sequelize, DataTypes) {
-    var Post = sequelize.define("Post", {
-        title: {
+    var Burger = sequelize.define("Burger", {
+        burger_name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [1]
+                len: [1],
+                isAlpha,
+                notEmpty
             }
-        },
-        body: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-            len: [1]
-        },
-        category: {
-            type: DataTypes.STRING,
-            defaultValue: "Personal"
         }
     });
-    return Post;
+    return Burger;
 };
-
-module.exports = {
-    returnBurgers: (cb) => {
-        orm.selectAll((result) => {
-            return cb(result);
-        });
-    },
-
-    addBurger: (bgName) => {
-        orm.insertOne(bgName);
-    },
-
-    updateDevoured: (id, status) => {
-        orm.updateOne(id, status);
-    }
-}
