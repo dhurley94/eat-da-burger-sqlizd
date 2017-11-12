@@ -1,7 +1,7 @@
 // get the client
-const mysql = require('mysql2');
 const Sequelize = require('sequelize');
 
+// instiantiate sequelize
 const connection = new Sequelize('database', 'username', 'password', {
     host: 'cdm1s48crk8itlnr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     user: 'mw48a0sjz64bevq3',
