@@ -18,8 +18,10 @@ router.get('/index', (req, res) => {
     });
 });
 
-router.post('/index', urlencodedParser, (req, res) => {
-    db.burger.insert({
+router.get('/index/:burgerId', (req, res) => {
+    db.burger.update({
+        devoured: 0
+    }, {
         where: {
             id: req.params.burgerId
         }
@@ -28,11 +30,15 @@ router.post('/index', urlencodedParser, (req, res) => {
     });
 });
 
-router.post('/index/:burgerId', (req, res) => {
-    db.burger.findOne({
-        where: {
-            id: req.params.burgerId
-        }
+// router.post('/index', urlencodedParser, (req, res) => {
+//     let newBurger = req.body.burger;
+//     burger.addBurger(newBurger);
+//     res.redirect('/');
+// });
+
+router.post('/index', urlencodedParser, (req, res) => {
+    db.burger.create({
+        burger_name: req.body.burger
     }).then((results) => {
         res.redirect('/');
     });
