@@ -29,9 +29,13 @@
     "mysql2": "^1.4.2",
     "path": "^0.12.7",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "sequelize": "^4.22.4"
 =======
     "sequelize": "^4.22.2"
 >>>>>>> 4c26fe9eb9864740f10cccc2ce460aefdedd236e
+=======
+    "sequelize": "^4.22.6"
+>>>>>>> 99c68bce02eee6f42428dcb27b029d64bd21926e
   }
 }
