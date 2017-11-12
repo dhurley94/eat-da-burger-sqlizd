@@ -10,9 +10,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/index', (req, res) => {
-    // burger.returnBurgers((content) => {
-    //     res.render('index', { burgs: content });
-    // });
     db.burger.findAll({}).then((results) => {
         res.render('index', { burgs: results });
     });
@@ -29,12 +26,6 @@ router.get('/index/:burgerId', (req, res) => {
         res.redirect('/');
     });
 });
-
-// router.post('/index', urlencodedParser, (req, res) => {
-//     let newBurger = req.body.burger;
-//     burger.addBurger(newBurger);
-//     res.redirect('/');
-// });
 
 router.post('/index', urlencodedParser, (req, res) => {
     db.burger.create({
