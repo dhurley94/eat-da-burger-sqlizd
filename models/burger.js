@@ -21,7 +21,8 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: 0
         },
         /**
-         * Not actively used, but exists for future iterations
+         * Not actively used,
+         * but exists for future iterations
          */
         active: {
             type: DataTypes.BOOLEAN,
