@@ -1,2 +1,2 @@
-# Eat da Burger
-    http://pure-ocean-37572.herokuapp.com/
+# Eat da Burger - Sequelized
+    http://sheltered-cliffs-43862.herokuapp.com
