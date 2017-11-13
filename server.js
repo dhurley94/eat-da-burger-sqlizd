@@ -40,8 +40,8 @@ app.set('port', (process.env.PORT || 3000));
  * Verifying sequelize before 
  * `app` is init
  */
-db.sequelize.sync({ force: true }).then(() => {
+// db.sequelize.sync({ force: true }).then(() => {
     app.listen(app.get('port'), '0.0.0.0', () => {
         console.log('Listening on port', app.get('port'));
     });
-});
+// });
