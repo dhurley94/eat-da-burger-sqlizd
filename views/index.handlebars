@@ -1,10 +1,10 @@
 <ul class="list-group">
   {{#each burgs }}
     {{#if this.devoured }}
-      <li id="devoured" class="list-group-item disabled"><a href='#' class="btn btn-warning btn-sm disabled">Devoured!</a> &nbsp;&nbsp; {{ this.burger_name }} at {{ this.updatedAt }}&nbsp;&nbsp;<a class="btn btn-sm btn-warning" href='/index/{{this.id}}/remove' type="button">Remove</a></li>
+      <li id="devoured" class="list-group-item disabled"><a href='#' class="btn btn-warning btn-sm disabled">Devoured!</a> &nbsp;&nbsp; {{ this.burger_name }} at {{ this.updatedAt }}&nbsp;&nbsp;<a class="btn btn-warning btn-sm" href='/index/{{this.id}}/remove' type="button">Remove</a></li>
     {{else}}
       <li class="list-group-item"><a href='/index/{{this.id}}' class="btn btn-info btn-sm">Eat!</a> &nbsp;&nbsp; <b>{{ this.burger_name }}</b> created on {{ this.createdAt }}&nbsp;&nbsp;
-      <a class="btn btn-sm btn-warning" href='/index/{{this.id}}/remove' type="button">Remove</a></li>
+      <a class="btn btn-warning btn-sm" href='/index/{{this.id}}/remove' type="button">Remove</a></li>
     {{/if}}
   {{/each}}
 </ul>
