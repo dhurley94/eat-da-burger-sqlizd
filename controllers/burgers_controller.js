@@ -34,6 +34,10 @@ router.get('/index/:burgerId', (req, res) => {
     });
 });
 
+/**
+ * Uses sequelize to remove row based on ID
+ * /remove URI is appending to all burgers in hbs layout
+ */
 router.get('/index/:burgerId/remove', (req, res) => {
     db.burger.destroy({
         where: {
