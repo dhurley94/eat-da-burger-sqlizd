@@ -34,6 +34,16 @@ router.get('/index/:burgerId', (req, res) => {
     });
 });
 
+router.get('/index/:burgerId/remove', (req, res) => {
+    db.burger.destroy({
+        where: {
+            id: req.params.burgerId
+        }
+    }).then((results) => {
+        res.redirect('/');
+    });
+});
+
 /**
  * POST handler for new burgers
  * creates new entry
