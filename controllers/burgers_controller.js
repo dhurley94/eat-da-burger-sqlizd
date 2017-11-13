@@ -1,4 +1,3 @@
-const burger = require('../models/burger');
 const router = require('express').Router();
 const bodyParser = require('body-parser');
 const db = require('../models');
