@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:moment:20170905':
+    - sequelize > moment:
+        patched: '2019-06-04T07:28:51.873Z'
+    - sequelize > moment-timezone > moment:
+        patched: '2019-06-04T07:28:51.873Z'
